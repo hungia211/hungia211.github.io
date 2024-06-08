@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="vi">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Merriweather&display=swap"
-            rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-            rel="stylesheet">
-        <title>Đăng ký khóa học - Trung tâm giáo dục ABC</title>
-        <style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Merriweather&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Đăng ký khóa học - Trung tâm giáo dục ABC</title>
+    <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
@@ -32,10 +29,18 @@
             padding: 8px;
             box-sizing: border-box;
         }
+
         input[type="submit"], input[type="reset"] {
             width: auto;
             padding: 10px 20px;
-            margin-right: 10px;
+            background-color: #4f9deb;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        input[type="reset"] {
+            background-color: #aaa;
         }
         .form-group-inline {
             display: flex;
@@ -49,143 +54,118 @@
             margin-right: 0;
         }
         .container {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            min-height: 100%;
         }
-
         .main-content {
             display: flex;
             flex-direction: row;
             height: calc(100vh - 50px); /* 50px là chiều cao của header */
         }
-
         .left-sidebar,
         .right-sidebar {
             flex: 1;
             background-color: #f9f9f9;
         }
-
         .center-content {
             flex: 6;
             background-color: #f9f9f9;
         }
-
         .box {
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin: 20px;
         }
     </style>
-    </head>
-    <body style="font-family: 'Merriweather', serif;" class="grid-container">
-        <h1 style="text-align: center;">Đăng ký khóa học - Trung tâm giáo dục ABC</h1>
-        <div class="main-content">
-
-            <div class="left-sidebar">
-
-            </div>
-            <div class="center-content">
-
-                <form action="/submit_form" method="post">
-
-                    <!-- Thông tin cơ bản của học viên -->
-                    <div class="form-group">
-                        <label for="fullName">Họ và tên học viên:<span style="color: red;">(*)</span></label>
-                        <input type="text" id="fullName" name="fullName"
-                            required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="dob">Ngày sinh:<span style="color: red;">(*)</span></label>
-                        <input type="date" id="dob" name="dob" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Số điện thoại học viên:<span style="color: red;">(*)</span></label>
-                        <input type="tel" id="phone" name="phone"
-                            pattern="0[0-9]{9,10}"
-                            required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Địa chỉ email:<span style="color: red;">(*)</span></label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <!-- Thông tin khóa học đăng ký -->
-                    <div class="form-group">
-                        <label for="course">Tên khóa học:</label>
-                        <select id="course" name="course" required>
-                            <option value="HTML">HTML</option>
-                            <option value="CSS">CSS</option>
-                            <option value="JavaScript">JavaScript</option>
-                            <option value="Python">Python</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="time">Thời gian học:</label>
-                        <select id="time" name="time" required>
-                            <option value="Sáng">Sáng</option>
-                            <option value="Chiều">Chiều</option>
-                            <option value="Tối">Tối</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="mode">Hình thức học:</label>
-                        <select id="mode" name="mode" required>
-                            <option value="Trực tuyến">Trực tuyến</option>
-                            <option value="Trực tiếp tại trung tâm">Trực tiếp
-                                tại trung
-                                tâm</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="startDate">Ngày bắt đầu:<span style="color: red;">(*)</span></label>
-                        <input type="date" id="startDate" name="startDate"
-                            required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="notes">Ghi chú thêm:</label>
-                        <textarea id="notes" name="notes" rows="4"></textarea>
-                    </div>
-
-                    <!-- Đánh giá và phản hồi -->
-                    <div class="form-group">
-                        <label for="rating">Đánh giá sơ bộ khóa học:</label>
-                        <select id="rating" name="rating" required>
-                            <option value="1">1 sao</option>
-                            <option value="2">2 sao</option>
-                            <option value="3">3 sao</option>
-                            <option value="4">4 sao</option>
-                            <option value="5">5 sao</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="feedback">Ý kiến, đóng góp:</label>
-                        <textarea id="feedback" name="feedback"
-                            rows="4"></textarea>
-                    </div>
-
-                    <!-- Nút gửi và xóa -->
-                    <div class="form-group">
-                        <input type="submit" value="Gửi">
-                        <input type="reset" value="Xóa">
-                    </div>
+</head>
+<body style="font-family: 'Merriweather', serif;" class="grid-container">
+    <h1 style="text-align: center;">Đăng ký khóa học - Trung tâm giáo dục ABC</h1>
+    <div class="main-content">
+        <div class="left-sidebar"></div>
+        <div class="center-content">
+            <form id="registrationForm" action="/submit_form" method="post">
+                <!-- Thông tin cơ bản của học viên -->
+                <div class="form-group">
+                    <label for="fullName">Họ và tên học viên:<span style="color: red;">(*)</span></label>
+                    <input type="text" id="fullName" name="fullName" required>
                 </div>
-
-                <div class="right-sidebar">
-
+                <div class="form-group">
+                    <label for="dob">Ngày sinh:<span style="color: red;">(*)</span></label>
+                    <input type="date" id="dob" name="dob" required>
                 </div>
-            </div>
-
-        </form>
-
-    </body>
+                <div class="form-group">
+                    <label for="phone">Số điện thoại học viên:<span style="color: red;">(*)</span></label>
+                    <input type="tel" id="phone" name="phone" pattern="0[0-9]{9,10}" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Địa chỉ email:<span style="color: red;">(*)</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <!-- Thông tin khóa học đăng ký -->
+                <div class="form-group">
+                    <label for="course">Tên khóa học:</label>
+                    <select id="course" name="course" required>
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Python">Python</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="time">Thời gian học:</label>
+                    <select id="time" name="time" required>
+                        <option value="Sáng">Sáng</option>
+                        <option value="Chiều">Chiều</option>
+                        <option value="Tối">Tối</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mode">Hình thức học:</label>
+                    <select id="mode" name="mode" required>
+                        <option value="Trực tuyến">Trực tuyến</option>
+                        <option value="Trực tiếp tại trung tâm">Trực tiếp tại trung tâm</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="startDate">Ngày bắt đầu:<span style="color: red;">(*)</span></label>
+                    <input type="date" id="startDate" name="startDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Ghi chú thêm:</label>
+                    <textarea id="notes" name="notes" rows="4"></textarea>
+                </div>
+                <!-- Đánh giá và phản hồi -->
+                <div class="form-group">
+                    <label for="rating">Đánh giá sơ bộ khóa học:</label>
+                    <select id="rating" name="rating" required>
+                        <option value="1">1 sao</option>
+                        <option value="2">2 sao</option>
+                        <option value="3">3 sao</option>
+                        <option value="4">4 sao</option>
+                        <option value="5">5 sao</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="feedback">Ý kiến, đóng góp:</label>
+                    <textarea id="feedback" name="feedback" rows="4"></textarea>
+                </div>
+                <!-- Nút gửi và xóa -->
+                <div class="form-group">
+                    <input type="submit" value="Gửi">
+                    <input type="reset" value="Xóa">
+                </div>
+            </form>
+        </div>
+        <div class="right-sidebar"></div>
+    </div>
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Ngăn chặn hành động gửi form mặc định
+            // Thực hiện các kiểm tra khác nếu cần thiết
+            window.location.href = 'camon.html'; // Chuyển hướng đến trang camon.html
+        });
+    </script>
+</body>
 </html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Merriweather&display=swap" rel="stylesheet">
+        <title>LAYOUT</title>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="logo"> 
+                <a href="#"><img src="logo.jpg" style="width: 50px;"></a>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Dịch vụ</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </div>
+        
+        <header>
+            <div class="container">
+                <h1>Nguyễn Văn A</h1>
+                <p>Giới thiệu bản thân</p>
+            </div>
+        </header>
+
+
+
+        <div class="container">
+            <section id="about">
+                <h2>Về tôi</h2>
+                <p>Xin chào! Tôi là Nguyễn Văn A, một lập trình viên đam mê với
+                    công nghệ và phát triển web.</p>
+            </section>
+
+            <section id="skills">
+                <h2>Kỹ năng</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                    <li>MySQL</li>
+                </ul>
+            </section>
+
+            <section id="contact">
+                <h2>Liên hệ</h2>
+                <p>Email: example@example.com</p>
+                <p>Số điện thoại: 0123 456 789</p>
+            </section>
+        </div>
+
+        <div style="padding: 100px;">
+            <div class="grid-container">
+                <div class="grid-item">10</div>
+                <div class="grid-item">9</div>     
+                <div class="grid-item">8</div>     
+                <div class="grid-item">7</div>     
+                <div class="grid-item">6</div>     
+                <div class="grid-item">5</div>                 
+            </div>
+        </div>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+
+            .container {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            header {
+                background-color: #333;
+                color: #fff;
+                padding: 20px 0;
+                text-align: center;
+            }
+
+            header h1 {
+                margin: 0;
+            }
+
+            header p {
+                margin: 5px 0 0;
+            }
+
+            section {
+                margin-bottom: 30px;
+            }
+
+            h2 {
+                color: #333;
+            }
+
+            ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            li {
+                margin-bottom: 5px;
+            }
+
+            #contact p {
+                margin: 10px 0;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+
+                gap: 10px;
+                background-color: #333;
+                color: white;
+                padding: 10px;
+            }
+
+            .grid-item {
+                background-color: #444;
+                padding: 20px;
+                text-align: center;
+            }
+
+            /* phần này của thanh điều hướng */
+            .navbar {
+                background-color: #333;
+                color: #fff;
+                padding: 10px 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo {
+                flex: 0 0 auto;
+            }
+
+            .nav-list {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+
+            .nav-list li {
+                display: inline-block;
+                margin-right: 20px;
+            }
+
+            .nav-list li:last-child {
+                margin-right: 0;
+            }   
+
+            .nav-list li a {
+                color: #fff;
+                text-decoration: none;
+            }
+
+            .nav-list li a:hover {
+                text-decoration: underline;
+            }
+
+            .content {
+                padding: 20px;
+            }   
+
+        </style>
+    </body>
+</html>
